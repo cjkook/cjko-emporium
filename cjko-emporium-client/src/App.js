@@ -2,6 +2,8 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
+import HomePage from "./homepage.component"
+
 const useStyles = makeStyles({
   root: {
     maxWidth: "lg",
@@ -12,8 +14,9 @@ function App() {
   const classes = useStyles();
   return (
     <>
+      <HomePage></HomePage>
       {/* <Navbar>
-        logo, menu
+        logo, menu, cart
       </Navbar> */}
       {/* <Jumbo></Jumbo> */}
 
