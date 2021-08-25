@@ -1,7 +1,10 @@
 import { Switch, Route } from "react-router-dom";
 
-import HomePage from "./pages/homepage/homepage.component";
 import "./App.scss";
+
+import HomePage from "./pages/homepage/homepage.component";
+// import CartPage from "./pages/"
+import ShopPage from "./pages/shop/shop.component";
 
 const MusicEquip = () => <h1>hats dawg.</h1>;
 
@@ -10,7 +13,9 @@ function App() {
     <>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/cart" component={HomePage} />
+        {/* <Route exact path="/cart" component={CartPage} /> */}
+        <Route exact path="/shop" component={ShopPage} />
+        
 
         <Route exact path="/shop/music-gear/" component={MusicEquip} />
         <Route exact path="/shop/music-gear/:id" component={MusicEquip} />

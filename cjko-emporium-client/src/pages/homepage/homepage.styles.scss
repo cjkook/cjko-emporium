@@ -1,3 +1,5 @@
+@import "../../sass/variables";
+
 .homepage {
   display: flex;
   flex-direction: column;
@@ -6,10 +8,12 @@
 }
 
 .contentArea {
-  background-color: #e2e5de;
+  background-color: $secondary;
+  justify-content: space-between;
 }
 
 h4 {
-  color: #757d75;
-  
+  color: $secondaryText;
+  opacity: 0.4;
+  font-style: italic;
 }
