@@ -1,7 +1,9 @@
 import "./menu-item.styles.scss";
+import {withRouter} from 'react-router-dom'
 
-const MenuItem = ({ title, imageUrl, importance }) => (
-  <div className={`${importance} menu-item`}>
+const MenuItem = ({ title, imageUrl, importance, history, linkUrl, match }) => (
+  // get history object from withRouter, access it to provide dynamic url
+  <div className={`${importance} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
     <div
       className="background-image"
       style={{
@@ -15,4 +17,4 @@ const MenuItem = ({ title, imageUrl, importance }) => (
   </div>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);
