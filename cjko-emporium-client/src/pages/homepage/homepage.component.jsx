@@ -8,7 +8,6 @@ const HomePage = () => (
   <div className="homepage">
     <Container className="contentArea">
       <Container>
-        <h1 className="brandTitle">cjko-emporium</h1>
         <i>
           <h4>
             An exercise in...
@@ -29,11 +28,9 @@ const HomePage = () => (
           </h4>
         </i>
       </Container>
-      <Container>
-        <div>
-          <Directory />
-        </div>
-      </Container>
+      <div>
+        <Directory />
+      </div>
     </Container>
   </div>
 );

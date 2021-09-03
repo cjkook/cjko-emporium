@@ -5,12 +5,14 @@ import "./App.scss";
 import HomePage from "./pages/homepage/homepage.component";
 // import CartPage from "./pages/"
 import ShopPage from "./pages/shop/shop.component";
+import NavBar from "./components/nav-bar/nav-bar.component"
 
 const MusicEquip = () => <h1>hats dawg.</h1>;
 
 function App() {
   return (
     <>
+      <NavBar/>
       <Switch>
         <Route exact path="/" component={HomePage} />
         {/* <Route exact path="/cart" component={CartPage} /> */}
