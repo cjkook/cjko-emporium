@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Typing from "react-typing-animation";
+
 import "./nav-bar.styles.scss";
 import { ReactComponent as Logo } from "../../assets/images/crown.svg";
 
@@ -10,6 +12,27 @@ const NavBar = () => (
         <Logo className="logo" />
       </Link>
       <h1 className="brandTitle">cjko-emporium</h1>
+      <div className="animation">
+        <i>
+          <h4>
+            An exercise in...
+            <Typing speed={100} loop={true}>
+              minimalism.
+              <Typing.Delay ms={1000} />
+              <Typing.Backspace count={30} />
+              patience.
+              <Typing.Delay ms={1000} />
+              <Typing.Backspace count={30} />
+              letting go.
+              <Typing.Delay ms={1000} />
+              <Typing.Backspace count={30} />
+              discovery.
+              <Typing.Delay ms={1000} />
+              <Typing.Backspace count={30} />
+            </Typing>
+          </h4>
+        </i>
+      </div>
     </div>
 
     <div className="options">
