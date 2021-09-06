@@ -1,0 +1,11 @@
+@import "../../sass/variables";
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    display: flex;
+    flex-direction: column;
+  }
+}

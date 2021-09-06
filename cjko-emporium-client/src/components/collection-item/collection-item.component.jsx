@@ -1,19 +1,26 @@
-import React from 'react';
+import React from "react";
 
-import './collection-item.styles.scss';
+import "./collection-item.styles.scss";
 
-const CollectionItem = ({ id, name, price, imageUrl }) => (
-  <div className='collection-item'>
+const CollectionItem = ({ id, name, price, imageUrl, dateSold, isSold }) => (
+  <div className={"collection-item"}>
     <div
-      className='image'
+      className={`image ${isSold ? "sold" : ""}`}
       style={{
-        backgroundImage: `url(${imageUrl})`
+        backgroundImage: `url(${imageUrl})`,
       }}
     />
-    <div className='collection-footer'>
-      <span className='name'>{name}</span>
-      <span className='price'>{price}</span>
-    </div>
+    {isSold ? (
+      <div className="collection-footer">
+        <span className="name">sold {dateSold.toLowerCase()}</span>
+        <span className="price">{price}</span>
+      </div>
+    ) : (
+      <div className="collection-footer">
+        <span className="name">{name}</span>
+        <span className="price">{price}</span>
+      </div>
+    )}
   </div>
 );
 

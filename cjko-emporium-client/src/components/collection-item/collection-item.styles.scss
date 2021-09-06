@@ -6,7 +6,6 @@
   flex-direction: column;
   height: 350px;
   align-items: center;
-  
 
   .image {
     width: 100%;
@@ -16,7 +15,10 @@
     margin-bottom: 5px;
     opacity: 0.8;
     overflow: hidden;
-    
+
+    &.sold {
+      filter: grayscale(100%);
+    }
 
     &:hover {
       // cursor: pointer;
@@ -36,11 +38,10 @@
     .name {
       width: 90%;
       margin-bottom: 15px;
-    }
 
-    .price {
-      width: 10%;
-      text-align: right;
+      &.sold {
+        width: 60%;
+      }
     }
   }
 }

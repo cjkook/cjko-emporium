@@ -5,8 +5,9 @@ import "./App.scss";
 import HomePage from "./pages/homepage/homepage.component";
 // import CartPage from "./pages/"
 import ShopPage from "./pages/shop/shop.component";
-import NavBar from "./components/nav-bar/nav-bar.component"
+import SignInSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up.component"
 
+import NavBar from "./components/nav-bar/nav-bar.component"
 const MusicEquip = () => <h1>hats dawg.</h1>;
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         {/* <Route exact path="/cart" component={CartPage} /> */}
         <Route exact path="/shop" component={ShopPage} />
+        <Route exact path="/login" component={SignInSignUpPage} />
         
 
         <Route exact path="/shop/music-gear/" component={MusicEquip} />

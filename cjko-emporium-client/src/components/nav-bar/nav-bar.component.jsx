@@ -36,6 +36,9 @@ const NavBar = () => (
     </div>
 
     <div className="options">
+      <Link className="option" to="/login">
+        login
+      </Link>
       <Link className="option" to="/shop">
         shop
       </Link>
