@@ -1,5 +1,5 @@
 # cjko-emporium
-an e-commerce site to host various items I, personally, have for sale.
+an e-commerce site to host various items I have for sale.
 
 # Technology 
 - Firebase
@@ -8,7 +8,7 @@ an e-commerce site to host various items I, personally, have for sale.
 - Stripe Payments
 
 # Techniques & Concepts
-- Authorization
+- Authentication
 - Progressive Web Apps
 - Single Page Applications
 
