@@ -1,5 +1,5 @@
 # cjko-emporium
-an e-commerce site to host various items I, personally, have for sale.
+an e-commerce site to host various items I have for sale.
 
 # Technology 
 - Firebase
