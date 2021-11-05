@@ -9,11 +9,10 @@ import ShopPage from "./pages/shop/shop.component";
 import SignInSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import NavBar from "./components/nav-bar/nav-bar.component";
 
+// access to firebase auth utility
 import { auth } from "./firebase/firebase.utils";
 
 const MusicEquip = () => <h1>hats dawg.</h1>;
-
-
 
 class App extends React.Component {
   constructor() {
@@ -24,17 +23,24 @@ class App extends React.Component {
     }
   }
 
+  // unsubscribe from google auth services
+  unsubscribeFromAuth = null;
+
   componentDidMount() {
-    auth.onAuthStateChanged( user => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( user => {
       this.setState({currentUser: user})
       console.log(user)
     })
   }
 
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={HomePage} />
           {/* <Route exact path="/cart" component={CartPage} /> */}

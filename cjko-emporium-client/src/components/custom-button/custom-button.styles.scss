@@ -2,15 +2,17 @@
 
 .custom-button {
   // min-width: 165px;
+  display: inline;
   text-align: center;
   width: 50px;
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: 0 35px;
+  padding: 10px 10px;
+  margin: 10px;
   font-size: 15px;
-  background-color: $dark;
-  color: $primary;
+  background-color: $primary;
+  color: $dark;
   text-transform: lowercase;
   // font-family: 'Open Sans Condensed';
   // font-weight: bolder;
